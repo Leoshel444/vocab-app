@@ -15,7 +15,7 @@ export default async (request) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-api-key": "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",
+      "x-api-key": "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",
       "anthropic-version": "2023-06-01"
     },
     body: body
