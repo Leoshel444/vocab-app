@@ -437,6 +437,7 @@ RULES: tenses=null unless verb (then provide present/past_simple/past_participle
         messages:[{role:"user",content:prompt}] })
     });
     const data = await res.json();
+if(!data || !data.content) throw new Error('API Error: ' + JSON.stringify(data));
     const raw = data.content.map(b=>b.text||'').join('');
     const clean = raw.replace(/```json|```/g,'').trim();
     currentData = JSON.parse(clean);
